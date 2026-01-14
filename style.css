@@ -301,6 +301,10 @@
             font-size: 0.9rem;
         }
 
+       .activity-image.active{
+              display: block;
+       }
+
         .activity-image img {
             width: 100%;
             height: 100%;
