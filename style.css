@@ -300,6 +300,7 @@
             font-family: 'IBM Plex Mono', monospace;
             font-size: 0.9rem;
             position: relative;
+            overflow: hidden;
         }
 
         .activity-img {
@@ -341,21 +342,6 @@
             font-size: 0.75rem;
             color: var(--accent);
             margin-top: 1rem;
-        }
-
-        .carousel {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .carousel-img {
-            width: 100%;
-            display: none;
-            border-radius: 12px;
-        }
-        
-        .carousel-img.active {
-            display: block;
         }
         
         .carousel-btn {
