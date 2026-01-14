@@ -312,7 +312,7 @@
         }
 
 
-        .activity-img active{
+        .activity-img.active{
             display: block;
         }
 
