@@ -299,17 +299,20 @@
             color: var(--text-secondary);
             font-family: 'IBM Plex Mono', monospace;
             font-size: 0.9rem;
+            position: relative;
         }
 
-       .activity-image.active{
-              display: block;
-       }
-
-        .activity-image img {
+        .activity-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: none; /* hide all images */
             transition: transform 0.4s ease;
+        }
+
+
+        .activity-img active{
+            display: block;
         }
 
         .activity-card:hover .activity-image img {
