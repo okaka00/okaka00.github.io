@@ -36,7 +36,7 @@
                 <!-- Project Card 1 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Project Name 1</h3>
+                        <h3 class="project-title">ROBOTICS</h3>
                         <span class="project-status">Active</span>
                     </div>
                     <p class="project-description">
@@ -55,7 +55,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Project Name 2</h3>
+                        <h3 class="project-title">APP DEV</h3>
                         <span class="project-status">Completed</span>
                     </div>
                     <p class="project-description">
@@ -83,8 +83,8 @@
                 <div class="activity-card">
                     <div class="activity-image">
                         <button class="carousel-btn prev" onclick="prevImage(this)">❮</button>
-                        <img src="images/image2.png" alt="Activity 1" class="carousel-img active">
-                        <img src="images/tibabar.png" alt="Activity 1" class="carousel-img">
+                        <img src="images/image2.png" class="carousel-img active" data-description = "Facilitators and Teachers" data-date="August 2025">
+                        <img src="images/tibabar.png" class="carousel-img" data-description = "Sk Tibabar Students" data-date = "sept 2025">
                         <button class="carousel-btn next" onclick="nextImage(this)">❯</button>
                     </div>
                     <div class="activity-content">
@@ -154,6 +154,14 @@
     </div>
 
     <script>
+        function updateContent(card, img){
+            const desc = card.querySelector(".activity-description");
+            const date = card.querySelector(".activity-date");
+
+            desc.textContent= img.dataset.description;
+            date.textContent= img.dataset.date;
+        }
+        
         function nextImage(button) {
             const carousel = button.parentElement;
             const images = carousel.querySelectorAll('.carousel-img');
@@ -166,6 +174,7 @@
             images[currentIndex].classList.remove('active');
             const nextIndex = (currentIndex + 1) % images.length;
             images[nextIndex].classList.add('active');
+            updateContent(carousel, images[nextIndex]);
         }
         
         function prevImage(button) {
@@ -180,6 +189,7 @@
             images[currentIndex].classList.remove('active');
             const prevIndex = (currentIndex - 1 + images.length) % images.length;
             images[prevIndex].classList.add('active');
+            updateContent(carousel, images[prevIndex]);
         }
 
         // Hide carousel buttons if only one image
