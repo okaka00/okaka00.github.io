@@ -154,12 +154,13 @@
     </div>
 
     <script>
-        function updateContent(card, img){
+        function updateContent(carousel, image){
+            const card = carousel.parentElement;
             const desc = card.querySelector(".activity-description");
             const date = card.querySelector(".activity-date");
 
-            desc.textContent= img.dataset.description;
-            date.textContent= img.dataset.date;
+            if (description) description.textContent = image.dataset.description;
+            if (date) date.textContent = image.dataset.date;
         }
         
         function nextImage(button) {
