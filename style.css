@@ -106,10 +106,17 @@ h1 {
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .about-text {
