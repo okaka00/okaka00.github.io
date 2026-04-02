@@ -98,6 +98,24 @@ h1 {
     box-shadow: 0 0 10px var(--glow);
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
 /* Sections */
 .section {
     margin-bottom: 4rem;
